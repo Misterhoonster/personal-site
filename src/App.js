@@ -1,4 +1,5 @@
 import FaceIcon from './face.js';
+import Experience from './experience.js';
 import './App.css';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
             <div className='subtitle text-xl sm:text-3xl md:text-4xl lg:text-5xl'>CS + Stats @ Harvard</div>
           </div>
       </div>
-      <div className='about m-auto mt-16 flex flex-col sm:flex-row justify-center'>
+      <div className='title m-auto mt-16 flex flex-col sm:flex-row justify-center'>
         <div className='text-3xl sm:text-4xl md:text-5xl flex flex-row justify-start sm:justify-end ml-8 sm:ml-0 mb-4 sm:mb-0 font-bold w-48 sm:w-64 md:w-80'>
           About:
         </div>
@@ -28,6 +29,7 @@ function App() {
         - creating AI that can rival human intelligence + adaptability
         </div>
       </div>
+      <Experience />
     </div>
   );
 }
