@@ -8,6 +8,7 @@ module.exports = {
       'sans': ['Inter']
     },
     colors: {
+      'white': '#ffffff',
       'tahiti': {
         100: '#cffafe',
         200: '#a5f3fc',
@@ -22,7 +23,8 @@ module.exports = {
       'beige': {
         100: '#fdf7e4',
         400: '#ded0b6',
-        700: '#bbab8c'
+        700: '#bbab8c',
+        900: '#67583d'
       }
     },
     extend: {},
