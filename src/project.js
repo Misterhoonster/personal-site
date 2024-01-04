@@ -4,7 +4,7 @@ function Project({ data }) {
     return (
           <div className='flex flex-col md:flex-row justify-start w-full mb-16'>
             <div className='flex flex-col justify-center'>
-                <a href={ data.links[0][1] } target='_blank' rel='noreferrer'><img src={ data.img } alt={ data.title } className='bg-white w-64 h-min md:w-96 mb-8 md:mb-0 rounded-xl shadow-sm hover:scale-105 hover:shadow-md transition'></img></a>
+                <a href={ data.links[0][1] } target='_blank' rel='noreferrer'><img src={ data.img } alt={ data.title } className='bg-white w-64 md:w-96 mb-8 md:mb-0 rounded-xl shadow-sm hover:scale-105 hover:shadow-md transition'></img></a>
             </div>
             <div className='flex flex-col justify-center w-full md:w-2/3 pl-0 md:pl-16'>
                 <div className='font-bold text-2xl sm:text-3xl md:text-4xl mb-4'>{data.title}</div>

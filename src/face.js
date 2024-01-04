@@ -12,7 +12,7 @@ function FaceIcon() {
     }, 0)
   }
 
-  return <img src={gif} onMouseEnter={handleHover} alt="winky face" />;
+  return <img src={gif} onClick={handleHover} onMouseEnter={handleHover} alt="winky face" />;
 }
 
 export default FaceIcon;
