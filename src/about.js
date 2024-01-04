@@ -13,9 +13,10 @@ function About() {
 
           ✨ I am interested in: <br />
           - contributing to impactful projects in health, climate, and other areas. <br />
-          - writing clean, readable code which caters to users and fellow programmers. <br />
+          - working in highly motivated, fast-paced teams. <br />
           - mining large datasets for valuable insights <br />
           - using AI to automate tasks and push creative boundaries. <br /><br />
+          
           🕺 Outside of school, I enjoy playing guitar, watching Korean dramas, dancing, and cooking (instant ramen).
           </div>
         </div>

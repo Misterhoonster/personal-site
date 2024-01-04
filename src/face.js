@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import wink from './wink.gif'
-import face from './face.png'
+import wink from './assets/wink.gif'
+import face from './assets/face.png'
 
 function FaceIcon() {
   const [gif, setGif] = useState(wink);

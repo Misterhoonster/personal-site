@@ -16,7 +16,7 @@ function Footer() {
             <div className='w-full flex flex-col justify-center px-4'>
               <hr className='bg-beige-700'/>
             </div>
-            <a href='https://linkedin.com/in/hoon-shin' target="_blank" rel="noreferrer" className='transition text-nowrap hover:text-beige-900'>@hoon-shin</a>
+            <a href='https://linkedin.com/in/hoon-shin' target="_blank" rel="noreferrer" className='transition text-nowrap hover:text-beige-900'>@hoonshin</a>
           </div>
           <div className="flex flex-row justify-center">
             <div>Email</div>

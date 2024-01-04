@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 const list = [
     {
@@ -70,6 +71,25 @@ function Experience() {
         );
     }
 
+    function display_menu(item, isCur) {
+      const classes = isCur ? 'bg-beige-900 rounded-full h-3 w-3' : 'bg-beige-400 rounded-full h-3 w-3 group-hover:bg-beige-900 transition duration-300';
+      return (
+        <div onClick={() => {setCur(item.id)}} className='h-16 w-16 group flex flex-row justify-center items-center'>
+          <div className={classes}></div>
+        </div>
+      )
+    }
+
+    function handle_browse(dir) {
+      if (dir === 'left') {
+        const new_cur = cur !== 0 ? cur - 1 : list.length - 1;
+        setCur(new_cur);
+      }
+      if (dir === 'right') {
+        setCur((cur + 1) % list.length);
+      }
+    }
+
     return (
       <div className='title flex flex-col md:flex-row justify-center'>
         <div className='font-bold flex flex-col justify-start w-48 sm:w-64 md:w-80'>
@@ -91,7 +111,7 @@ function Experience() {
             })
             }
           </div>
-          <div className='h-96 overflow-auto text-md sm:text-lg md:text-xl'>
+          <div className='h-72 md:h-96 overflow-auto text-md sm:text-lg md:text-xl'>
             {
             list.map(item => {
                 return display_blurb(item['blurb'], item.id === cur);
@@ -99,15 +119,20 @@ function Experience() {
             }
           </div>
         </div>
-        <div className="md:hidden flex flex-row justify-center mt-4">
-          <div className="flex flex-row justify-around items-center bg-beige-700 rounded-full h-6">
+        <div className="md:hidden flex flex-row justify-center">
+            <div className="h-16 w-16 flex flex-col justify-center items-center group">
+              <FontAwesomeIcon icon={faAngleLeft} className='h-8 text-beige-700 group-hover:text-beige-900 transition duration-300' onClick={() => handle_browse('left')}/>
+            </div>
+            <div className='flex flex-row justify-center'>
             {
             list.map(item => {
-                return (item.id !== cur ? <div onClick={() => {setCur(item.id)}} className='mx-2 bg-beige-100 hover:bg-beige-900 transition duration-300 rounded-full h-2 w-2'></div>
-                : <div onClick={() => {setCur(item.id)}} className='mx-2 bg-beige-900 transition duration-300 rounded-full h-2 w-2'></div>);
+                return display_menu(item, item.id === cur);
             })
             }
-          </div>
+            </div>
+            <div className="h-16 w-16 flex flex-col justify-center items-center group">
+              <FontAwesomeIcon icon={faAngleRight} className='h-8 text-beige-700 group-hover:text-beige-900 transition duration-300' onClick={() => handle_browse('right')}/>
+            </div>
         </div>
       </div>
     );
